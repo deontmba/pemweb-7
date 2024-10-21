@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'mhs';
+$dbname = 'mahasiswa';
 $username = 'root';
 $password = '';
 
@@ -10,4 +10,4 @@ try {
 } catch (PDOException $e) {
     die("Koneksi gagal: " . $e->getMessage());
 }
-?>
+

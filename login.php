@@ -14,11 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user && password_verify($pass, $user['pass'])) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['level'] = $user['level'];
+        $_SESSION['npm'] = $user['npm']; // Menyimpan npm dalam sesi
 
         if ($user['level'] == '1') {
-            header('Location: user_dashboard.php');
+            header('Location: tampil_data.php');
         } elseif ($user['level'] == '2') {
-            header('Location: admin_dashboard.php');
+            header('Location: tampil_data.php');
         }
     } else {
         echo "Login gagal!";
